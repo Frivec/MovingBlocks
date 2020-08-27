@@ -1,0 +1,8 @@
+name: MovingBlocks
+version: 1.0
+api-version: 1.16
+author: Frivec
+main: fr.frivec.MovingBlocks
+commands:
+  moveblock:
+    description: Main command for MovingBlocks

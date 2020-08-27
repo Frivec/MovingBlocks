@@ -1,0 +1,56 @@
+group 'fr.frivec'
+version '1.0'
+description 'Test to move blocks in Minecraft 1.16.1'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+configurations {
+    extraLibs
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+repositories {
+    
+    mavenCentral()
+    mavenLocal()
+    
+	maven {
+    	url 'https://repo.destroystokyo.com/repository/maven-public/'
+	}
+	
+	maven {
+		url 'https://maven.enginehub.org/repo/'
+	}
+	
+}
+
+dependencies {
+	
+	compileOnly "org.spigotmc:spigot:1.16.1-R0.1-SNAPSHOT"
+    compileOnly group: 'com.destroystokyo.paper', name: 'paper-api', version: '1.16.1-R0.1-SNAPSHOT'
+//    compileOnly group: 'com.sk89q.worldedit', name: 'worldedit-bukkit', version: '7.1.0'
+	
+}
+
+jar {
+
+    jar.setDestinationDir(new File("C:/Users/antoi/Desktop/Developpement/Minecraft/Serveurs/Serveurs_Spigot/Serveur_1.16.2/plugins"))
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+}
+
+jar.setArchiveName("MovingBlocks.jar")
