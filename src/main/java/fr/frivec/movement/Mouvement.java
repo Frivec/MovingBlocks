@@ -1,6 +1,5 @@
 package fr.frivec.movement;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -110,12 +109,9 @@ public class Mouvement {
 			
 		final double distance = translation.length();
 			
-		if(Math.round(translation.getX()) == 0 && Math.round(translation.getY()) == 0 && Math.round(translation.getZ()) == 0) {
-				
-			Bukkit.broadcastMessage("§aEnd of mouvement.");
+		if(Math.round(translation.getX()) == 0 && Math.round(translation.getY()) == 0 && Math.round(translation.getZ()) == 0)
+			
 			this.stop();
-				
-		}
 			
 		if(translation.getX() != 0)
 			

@@ -8,7 +8,6 @@ import java.nio.file.Paths;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import fr.frivec.commands.MoveBlockCommand;
-import fr.frivec.commands.dev.DevCommand;
 import fr.frivec.movement.MoveSave;
 import fr.frivec.utils.json.GsonManager;
 
@@ -28,7 +27,7 @@ public class MovingBlocks extends JavaPlugin {
 		this.json = new GsonManager();
 		
 		//Commands
-		this.getCommand("dev").setExecutor(new DevCommand());
+//		this.getCommand("dev").setExecutor(new DevCommand());
 		this.getCommand("moveblock").setExecutor(new MoveBlockCommand());
 		
 		/*
