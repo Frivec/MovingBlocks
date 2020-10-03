@@ -1,6 +1,8 @@
 # MovingBlocks
 Plugin to move blocks in Minecraft 1.16.2
 
+MovingBlocks by Frivec is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0
+
 __Description:__
 
 This plugin allow you to move blocks by following a pattern.
